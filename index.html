@@ -8,7 +8,7 @@
      SEO — titre, description, mots-clés
      ============================================================ -->
 <title>Chauffeur VTC Bordeaux · Transfert aéroport & privé — 1 Chauffeur Pour Vous</title>
-<meta name="description" content="Chauffeur VTC privé à Bordeaux : transferts aéroport Mérignac & gare Saint-Jean, longue distance, mise à disposition, mariages. Berline & van jusqu'à 8 places, ponctualité garantie, service 24/7 sur réservation. Devis au 07 66 35 40 88.">
+<meta name="description" content="Chauffeur VTC privé à Bordeaux : transferts aéroport Mérignac & gare Saint-Jean, longue distance, mise à disposition, mariages. Berline & van jusqu'à 7 places, ponctualité garantie, service 24/7 sur réservation. Devis au 07 66 35 40 88.">
 <meta name="keywords" content="chauffeur VTC Bordeaux, VTC Bordeaux, transfert aéroport Bordeaux Mérignac, chauffeur privé Bordeaux, VTC gare Saint-Jean, VTC longue distance, chauffeur mariage Bordeaux, VTC bassin d'Arcachon, VTC route des vins Saint-Émilion, VTC Dune du Pilat, wine tour Bordeaux">
 <meta name="author" content="1 Chauffeur Pour Vous">
 <meta name="robots" content="index, follow, max-image-preview:large">
@@ -23,7 +23,7 @@
 
 <!-- Open Graph (aperçu sur réseaux sociaux) -->
 <meta property="og:title" content="Chauffeur VTC Bordeaux · Transfert aéroport & privé — 1 Chauffeur Pour Vous">
-<meta property="og:description" content="Réservez votre chauffeur VTC privé à Bordeaux : aéroport, gare, longue distance, mariages et événements. Berline & van jusqu'à 8 places.">
+<meta property="og:description" content="Réservez votre chauffeur VTC privé à Bordeaux : aéroport, gare, longue distance, mariages et événements. Berline & van jusqu'à 7 places.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="1 Chauffeur Pour Vous">
@@ -36,7 +36,7 @@
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Chauffeur VTC Bordeaux · Transfert aéroport & privé">
-<meta name="twitter:description" content="Chauffeur VTC privé à Bordeaux : aéroport, gare, longue distance, mariages. Berline & van jusqu'à 8 places, 24/7 sur réservation.">
+<meta name="twitter:description" content="Chauffeur VTC privé à Bordeaux : aéroport, gare, longue distance, mariages. Berline & van jusqu'à 7 places, 24/7 sur réservation.">
 <meta name="twitter:image" content="https://www.1chauffeurpourvous.fr/chauffeur-hero.jpg">
 
 <link rel="icon" href="logo.png" type="image/png">
@@ -203,14 +203,16 @@ p{ margin:0; color: var(--ink-soft); }
 .header-inner{
   display:flex; align-items:center; justify-content:space-between;
   padding: 12px 28px;
+  overflow-x:auto; -webkit-overflow-scrolling:touch;
 }
-.logo{ display:flex; align-items:center; gap:10px; min-width:0; font-weight:600; font-size:1.05rem; color: var(--ink); }
+.header-inner::-webkit-scrollbar{ display:none; }
+.logo{ display:flex; align-items:center; gap:10px; min-width:0; font-weight:600; font-size:1.05rem; color: var(--ink); flex:0 0 auto; }
 .hero .logo, #siteHeader:not(.scrolled) .logo{ color: var(--white); }
 .logo-img{ width:58px; height:auto; aspect-ratio:218 / 125; object-fit:contain; flex:0 0 auto; }
 .logo em{ font-style: normal; font-weight:400; opacity:.75; }
 
-.main-nav{ display:flex; gap: 20px; }
-.header-right{ display:flex; align-items:center; gap: 40px; }
+.main-nav{ display:flex; gap: 20px; flex:0 0 auto; }
+.header-right{ display:flex; align-items:center; gap: 40px; flex:0 0 auto; }
 .main-nav a{ font-size:.92rem; font-weight:500; color: inherit; opacity:.85; position:relative; padding-bottom:2px; }
 .main-nav a::after{
   content:""; position:absolute; left:0; right:100%; bottom:0; height:1px;
@@ -245,6 +247,9 @@ p{ margin:0; color: var(--ink-soft); }
 .mobile-menu.open{ display:flex; }
 .mobile-menu a{ padding: 12px 0; font-weight:500; border-bottom: 1px solid var(--line); }
 .mobile-menu .btn{ margin-top: 12px; }
+.mobile-menu-info{ display:flex; flex-wrap:wrap; gap:8px; padding: 10px 0 14px; }
+.mobile-menu-info .weather-badge,
+.mobile-menu-info .season-badge{ color: var(--accent-deep); background: var(--bg-alt); border-color: var(--line); }
 
 .scroll-progress{
   position: fixed; top:0; left:0; height:2px; width:100%;
@@ -364,39 +369,35 @@ p{ margin:0; color: var(--ink-soft); }
 
 .booking-card{
   position:relative; overflow:hidden;
-  background:rgba(255,255,255,.76); border:1px solid rgba(255,255,255,.55); border-radius:24px;
-  box-shadow: 0 28px 90px -25px rgba(8,6,3,.55), inset 0 1px 0 rgba(255,255,255,.8);
-  -webkit-backdrop-filter: blur(30px) saturate(170%);
-  backdrop-filter: blur(30px) saturate(170%);
+  background: linear-gradient(160deg, #7E9E93 0%, #A9AE83 32%, #D8AD77 60%, #EF9B5E 82%, #E8834B 100%);
+  border:1px solid rgba(255,255,255,.4); border-radius:24px;
+  box-shadow: 0 28px 90px -25px rgba(8,6,3,.55), inset 0 1px 0 rgba(255,255,255,.5);
   padding: 26px; display:flex; flex-direction:column; gap: 11px;
   transition: transform .35s ease, box-shadow .35s ease;
 }
 .booking-card::before{
   content:""; position:absolute; width:180px; height:180px; right:-80px; top:-100px; border-radius:50%;
-  background:radial-gradient(circle, rgba(255,255,255,.95), rgba(255,255,255,0) 68%); pointer-events:none;
+  background:radial-gradient(circle, rgba(255,255,255,.5), rgba(255,255,255,0) 68%); pointer-events:none;
 }
-.booking-card:hover{ transform:translateY(-4px); box-shadow:0 34px 100px -25px rgba(8,6,3,.62), inset 0 1px 0 rgba(255,255,255,.9); }
+.booking-card:hover{ transform:translateY(-4px); box-shadow:0 34px 100px -25px rgba(8,6,3,.62), inset 0 1px 0 rgba(255,255,255,.6); }
 .booking-card h2{
   font-size:1.35rem;
   margin-bottom:4px;
-  background: linear-gradient(100deg, var(--wine) 0%, var(--accent) 45%, var(--gold) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
+  color: var(--ink);
 }
 .form-row{ display:grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .field{ display:flex; flex-direction:column; gap:6px; }
 .field label{ font-size:.78rem; font-weight:600; color: var(--ink-soft); text-transform:uppercase; letter-spacing:.04em; }
 .field label span{ text-transform:none; font-weight:400; }
+.field label{ color: rgba(23,21,15,.7); }
 .field input, .field textarea{
-  border: 1px solid var(--line); border-radius: 8px; padding: 11px 13px;
-  font-family: var(--font-body); font-size: .95rem; color: var(--ink); background: rgba(250,248,244,.72);
+  border: 1px solid rgba(255,255,255,.55); border-radius: 8px; padding: 11px 13px;
+  font-family: var(--font-body); font-size: .95rem; color: var(--ink); background: rgba(255,255,255,.82);
   transition:background .2s ease, border-color .2s ease, box-shadow .2s ease;
 }
 .field textarea{ resize: vertical; min-height: 52px; }
-.field input:focus, .field textarea:focus{ outline:0; border-color:rgba(176,112,58,.72); background:rgba(255,255,255,.9); box-shadow:0 0 0 3px rgba(176,112,58,.13); }
-.form-note{ font-size:.78rem; color: var(--ink-soft); text-align:center; margin-top: 2px; }
+.field input:focus, .field textarea:focus{ outline:0; border-color:rgba(255,255,255,.9); background:rgba(255,255,255,.96); box-shadow:0 0 0 3px rgba(255,255,255,.35); }
+.form-note{ font-size:.78rem; color: rgba(23,21,15,.65); text-align:center; margin-top: 2px; }
 
 /* ---------- Sections génériques ---------- */
 section{ padding: 44px 0; }
@@ -532,69 +533,12 @@ footer{ background: var(--bg-alt); border-top: 1px solid var(--line); padding: 3
   .photo-tilt{ transform:none !important; }
 }
 
-/* ---------- Responsive ---------- */
-@media (max-width: 980px){
-  .main-nav, .header-cta{ display:none; }
-  .burger{ display:flex; }
-  .hero{ min-height:auto; }
-  .hero-inner{ grid-template-columns: 1fr; padding-top: 130px; padding-bottom:64px; }
-  .services-grid{ grid-template-columns: 1fr 1fr; }
-  .excursion-showcase{ grid-template-columns:1fr; min-height:0; padding-left:20px; padding-right:20px; }
-  .excursion-feature{ min-height:440px; }
-  .gallery-grid{ grid-template-columns:repeat(2, 1fr); }
-  .fleet-grid{ grid-template-columns: 1fr; }
-  .faq-list{ grid-template-columns:1fr; }
-  .reputation-inner{ align-items:flex-start; flex-direction:column; }
-  .footer-top{ grid-template-columns: 1fr; gap: 26px; }
-}
-
-/* ---------- Perf mobile : on coupe les animations continues et les flous ----------
-   Sur mobile, la dérive du hero, les bulles décoratives (liquid-orb) et le ruban de
-   couleur tournaient en permanence même une fois affichés : coûteux en CPU/GPU.
-   Le backdrop-filter est également très coûteux à recalculer sur processeur mobile. */
-@media (max-width: 780px){
-  .hero-media{ animation:none !important; }
-  .liquid-orb{ animation:none !important; }
-  .theme-ribbon{ animation:none !important; }
-
-  #siteHeader.scrolled,
-  .booking-card,
-  .fleet-tag,
-  .excursion-feature-copy,
-  .gallery-item figcaption,
-  .reputation-cta .btn-primary,
-  .reputation-cta .btn-outline-light,
-  .faq-item{
-    -webkit-backdrop-filter:none;
-    backdrop-filter:none;
-  }
-  #siteHeader.scrolled{ background: rgba(250,248,244,.94); }
-  .booking-card{ background: var(--glass-strong); }
-  .fleet-tag{ background:rgba(20,17,12,.62); }
-  .excursion-feature-copy{ background:rgba(15,12,8,.55); }
-  .gallery-item figcaption{ background:rgba(18,15,10,.55); }
-  .reputation-cta .btn-primary{ background:rgba(255,255,255,.98); }
-  .reputation-cta .btn-outline-light{ background: rgba(255,255,255,.16); }
-  .faq-item{ background: rgba(255,255,255,.85); }
-}
-@media (max-width: 560px){
-  .wrap{ padding: 0 20px; }
-  section{ padding: 34px 0; }
-  .form-row{ grid-template-columns: 1fr; }
-  .services-grid{ grid-template-columns: 1fr; }
-  .excursion-feature{ min-height:340px; }
-  .gallery-grid{ grid-template-columns:1fr; gap:14px; }
-  .gallery-item{ aspect-ratio: 16 / 10; }
-  .liquid-orb-one{ right:-18%; top:14%; opacity:.72; }
-  .liquid-orb-two{ display:none; }
-  .hero-media{ background-position:58% center; }
-  .booking-card{ border-radius:20px; padding:22px; }
-  .excursion-feature-copy{ left:14px; right:14px; bottom:14px; padding:18px; }
-  .reputation-actions{ width:100%; flex-direction:column; }
-  .reputation-actions .btn{ width:100%; }
-  .logo-img{ width:50px; }
-  .logo span{ font-size:.9rem; }
-}
+/* ---------- Responsive ----------
+   Sur demande : le site garde la même mise en page, le même menu et les
+   mêmes effets visuels (flou, animations) à toutes les tailles d'écran,
+   y compris sur mobile — quitte à faire défiler horizontalement certaines
+   sections plus larges que l'écran. */
+.burger{ display:none; }
 
 </style>
 
@@ -609,7 +553,7 @@ footer{ background: var(--bg-alt); border-top: 1px solid var(--line); padding: 3
       "@type": ["LocalBusiness", "TaxiService"],
       "@id": "https://www.1chauffeurpourvous.fr/#business",
       "name": "1 Chauffeur Pour Vous",
-      "description": "Chauffeur VTC privé à Bordeaux : transferts aéroport et gare, longue distance, mise à disposition, mariages et excursions. Berline et van jusqu'à 8 places.",
+      "description": "Chauffeur VTC privé à Bordeaux : transferts aéroport et gare, longue distance, mise à disposition, mariages et excursions. Berline et van jusqu'à 7 places.",
       "image": "https://www.1chauffeurpourvous.fr/chauffeur-hero.jpg",
       "logo": "https://www.1chauffeurpourvous.fr/logo.png",
       "url": "https://www.1chauffeurpourvous.fr/",
@@ -678,7 +622,7 @@ footer{ background: var(--bg-alt); border-top: 1px solid var(--line); padding: 3
         {
           "@type": "Question",
           "name": "Combien de passagers pouvez-vous transporter ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Notre berline accueille jusqu'à 4 passagers avec bagages, notre van jusqu'à 8 passagers. Précisez le nombre de personnes et de valises lors de la réservation pour un devis adapté." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Notre berline accueille jusqu'à 4 passagers avec bagages, notre van jusqu'à 7 passagers. Précisez le nombre de personnes et de valises lors de la réservation pour un devis adapté." }
         },
         {
           "@type": "Question",
@@ -733,13 +677,21 @@ footer{ background: var(--bg-alt); border-top: 1px solid var(--line); padding: 3
   </div>
 
   <div id="mobileMenu" class="mobile-menu">
+    <div class="mobile-menu-info">
+      <a id="weatherBadgeMobile" class="weather-badge" href="https://meteofrance.com/previsions-meteo-france/bordeaux/33000" target="_blank" rel="noopener" aria-label="Voir la météo de Bordeaux sur Météo-France (nouvel onglet)"></a>
+      <span id="seasonBadgeMobile" class="season-badge"></span>
+    </div>
     <a href="#flotte">Flotte</a>
     <a href="#services">Trajets</a>
     <a href="#excursions">Excursions</a>
     <a href="#avis">Avis</a>
     <a href="#faq">FAQ</a>
     <a href="tel:+33766354088">07 66 35 40 88</a>
-    <a href="#reserver" class="btn btn-primary">WhatsApp</a>
+    <a href="https://wa.me/33766354088" target="_blank" rel="noopener" class="btn btn-whatsapp btn-block">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.66 15L2 22l5.14-1.32A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.08-1.12l-.29-.17-3.05.78.82-2.97-.19-.3A8 8 0 1 1 12 20zm4.4-5.8c-.24-.12-1.43-.7-1.65-.79-.22-.08-.38-.12-.54.12-.16.24-.62.79-.76.95-.14.16-.28.18-.52.06-.24-.12-1-.37-1.9-1.17-.7-.62-1.18-1.39-1.32-1.63-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41-.14 0-.3-.01-.46-.01-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.1.16 1.52.1.46-.07 1.43-.58 1.63-1.15.2-.57.2-1.05.14-1.15-.06-.1-.22-.16-.46-.28z"/></svg>
+      WhatsApp
+    </a>
+    <a href="#reserver" class="btn btn-outline btn-block">Demandez un devis</a>
   </div>
 </header>
 
@@ -766,14 +718,14 @@ footer{ background: var(--bg-alt); border-top: 1px solid var(--line); padding: 3
       <h1>Votre chauffeur privé.</h1>
       <p class="hero-sub">Transferts aéroport, gare, longue distance et événements. Un tarif annoncé avant le départ, un chauffeur professionnel, aucune mauvaise surprise.</p>
       <ul class="hero-points">
-        <li>Suivi des vols &amp; 15&nbsp;min d'attente offertes</li>
-        <li>Annulation sous condition</li>
-        <li>Berline &amp; van jusqu'à 8 passagers</li>
+        <li>Suivi des vols &amp; 15&nbsp;min d'attentes offertes</li>
+        <li>Annulation sous conditions</li>
+        <li>Berline &amp; van jusqu'à 7 passagers</li>
       </ul>
     </div>
 
     <form class="booking-card" id="bookingForm" aria-labelledby="reserver">
-      <h2 id="reserver">Demander un devis</h2>
+      <h2 id="reserver">Demandez un devis</h2>
       <div class="field">
         <label for="trajet">Trajet</label>
         <input type="text" id="trajet" name="trajet" placeholder="Aéroport Mérignac → Centre-ville Bordeaux" required>
@@ -963,7 +915,7 @@ footer{ background: var(--bg-alt); border-top: 1px solid var(--line); padding: 3
       </details>
       <details class="faq-item">
         <summary>Combien de passagers pouvez-vous transporter ?</summary>
-        <div class="faq-answer"><p>Notre berline accueille jusqu'à 4 passagers avec bagages, notre van jusqu'à 8 passagers.</p></div>
+        <div class="faq-answer"><p>Notre berline accueille jusqu'à 4 passagers avec bagages, notre van jusqu'à 7 passagers.</p></div>
       </details>
     </div>
   </div>
@@ -1134,14 +1086,16 @@ footer{ background: var(--bg-alt); border-top: 1px solid var(--line); padding: 3
     applyColors(currentPalette[colorIndex], period);
 
     const badge = document.getElementById('seasonBadge');
-    if (badge) {
+    const badgeMobile = document.getElementById('seasonBadgeMobile');
+    [badge, badgeMobile].forEach(function(b){
+      if (!b) return;
       if (event) {
-        badge.textContent = event.label;
-        badge.classList.add('visible');
+        b.textContent = event.label;
+        b.classList.add('visible');
       } else {
-        badge.classList.remove('visible');
+        b.classList.remove('visible');
       }
-    }
+    });
   }
 
   function rotateAccent(){
@@ -1188,7 +1142,8 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 // --- Météo Bordeaux (actualisation automatique toutes les heures) ---
 (function(){
   const badge = document.getElementById('weatherBadge');
-  if (!badge) return;
+  const badgeMobile = document.getElementById('weatherBadgeMobile');
+  if (!badge && !badgeMobile) return;
 
   const LAT = 44.837789, LON = -0.579180;
 
@@ -1213,11 +1168,13 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
       const data = await res.json();
       const temp = Math.round(data.current_weather.temperature);
       const icon = iconFor(data.current_weather.weathercode);
-      badge.textContent = `${icon} Bordeaux ${temp}°C`;
-      badge.classList.add('visible');
+      const text = `${icon} Bordeaux ${temp}°C`;
+      if (badge) { badge.textContent = text; badge.classList.add('visible'); }
+      if (badgeMobile) { badgeMobile.textContent = text; badgeMobile.classList.add('visible'); }
     } catch (err) {
       // En cas d'échec (pas de réseau, API indisponible...), on masque le badge
-      badge.classList.remove('visible');
+      if (badge) badge.classList.remove('visible');
+      if (badgeMobile) badgeMobile.classList.remove('visible');
     }
   }
 
