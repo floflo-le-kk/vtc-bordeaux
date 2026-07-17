@@ -546,11 +546,18 @@ footer{ background: var(--bg-alt); border-top: 1px solid var(--line); padding: 3
 }
 
 /* ---------- Responsive ----------
-   Sur demande : le site garde la même mise en page, le même menu et les
-   mêmes effets visuels (flou, animations) à toutes les tailles d'écran,
-   y compris sur mobile — quitte à faire défiler horizontalement certaines
-   sections plus larges que l'écran. */
-.burger{ display:none; }
+   Le menu repasse en burger sur petit écran (sinon il déborde/devient
+   illisible avec tous ses éléments sur une seule ligne). Les grilles restent
+   en auto-fit (elles s'empilent déjà proprement toutes seules). En revanche,
+   contrairement à l'ancienne version, on NE désactive plus le flou, les
+   animations ni les couleurs sur mobile : les effets visuels restent actifs
+   partout, comme demandé. */
+@media (max-width: 980px){
+  .main-nav, .header-cta{ display:none; }
+  .burger{ display:flex; }
+  .hero{ min-height:auto; }
+  .hero-inner{ padding-top: 130px; padding-bottom:64px; }
+}
 
 </style>
 
