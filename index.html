@@ -420,6 +420,16 @@ p{ margin:0; color: var(--ink-soft); }
 }
 .booking-toggle summary{
   cursor:pointer; list-style:none; display:flex; align-items:center; justify-content:space-between; gap:12px;
+  border-radius:10px;
+  animation: devisBlink .8s step-start infinite;
+}
+.booking-toggle.no-blink summary{ animation:none; }
+@keyframes devisBlink{
+  0%, 100%{ opacity:1; }
+  50%{ opacity:.15; }
+}
+@media (prefers-reduced-motion: reduce){
+  .booking-toggle summary{ animation:none; }
 }
 .booking-toggle summary::-webkit-details-marker{ display:none; }
 .booking-toggle summary h2{ margin-bottom:0; }
@@ -1465,6 +1475,11 @@ const WHATSAPP_NUMBER = '33766354088';
 const bookingToggle = document.getElementById('bookingToggle');
 function openBookingToggle(){
   if (bookingToggle && !bookingToggle.open) bookingToggle.open = true;
+}
+if (bookingToggle) {
+  bookingToggle.addEventListener('toggle', () => {
+    bookingToggle.classList.add('no-blink');
+  });
 }
 document.querySelectorAll('a[href="#reserver"]').forEach(link => {
   link.addEventListener('click', openBookingToggle);
