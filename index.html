@@ -546,6 +546,8 @@ footer{ background: var(--bg-alt); border-top: 1px solid var(--line); padding: 3
 .footer-links a{ font-size:.9rem; color: var(--ink-soft); }
 .footer-links a:hover{ color: var(--ink); }
 .footer-cta{ display:flex; flex-direction:column; gap: 12px; align-items:flex-start; }
+.footer-social{ display:inline-flex; align-items:center; justify-content:center; width:42px; height:42px; border-radius:50%; border:1px solid var(--line); color: var(--ink); transition: background .3s ease, color .3s ease, transform .3s ease; }
+.footer-social:hover{ background: var(--gold, #b0703a); color:#fff; transform: translateY(-2px); }
 .footer-bottom{ display:flex; justify-content:space-between; gap: 20px; flex-wrap:wrap; padding-top: 22px; font-size:.8rem; color: var(--ink-soft); }
 .footer-bottom a{ text-decoration: underline; }
 
@@ -733,7 +735,7 @@ footer{ background: var(--bg-alt); border-top: 1px solid var(--line); padding: 3
         {
           "@type": "Question",
           "name": "Proposez-vous des trajets longue distance hors de Bordeaux ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Oui, toute destination en France ou à l'étranger, au départ ou à l'arrivée de Bordeaux, en un seul véhicule, sans correspondance, sur devis établi à l'avance." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, toutes destinations en France ou à l'étranger, au départ ou à l'arrivée de Bordeaux, en un seul véhicule, sans correspondance, sur devis établi à l'avance." }
         },
         {
           "@type": "Question",
@@ -931,7 +933,7 @@ footer{ background: var(--bg-alt); border-top: 1px solid var(--line); padding: 3
       </div>
       <div class="service-item reveal" data-d="0.05s">
         <h3 data-i18n="service2.title">Longue distance</h3>
-        <p data-i18n="service2.desc">Toute destination, au départ ou à l'arrivée de Bordeaux.</p>
+        <p data-i18n="service2.desc">Toutes destinations, au départ ou à l'arrivée de Bordeaux.</p>
       </div>
       <div class="service-item reveal" data-d="0.1s">
         <h3 data-i18n="service3.title">Mise à disposition</h3>
@@ -1068,6 +1070,9 @@ footer{ background: var(--bg-alt); border-top: 1px solid var(--line); padding: 3
       </div>
       <div class="footer-cta">
         <a href="tel:+33766354088" class="btn btn-outline">07 66 35 40 88</a>
+        <a href="https://www.instagram.com/1chauffeurpourvous/" target="_blank" rel="noopener" class="footer-social" aria-label="Instagram">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
       </div>
     </div>
     <div class="footer-bottom">
